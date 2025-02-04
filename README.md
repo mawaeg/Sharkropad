@@ -18,7 +18,7 @@ This repository includes a custom pcb design, a 3d printed case and QMK firmware
 
 ### Pcb
 
-The sharkropad is based on a custom pcb. You can find the manufacturing files in the latest release.
+The Sharkropad is based on a custom pcb. You can find the manufacturing files in the latest release.
 
 I got my pcb manufactured and assembled from [JLCPCB](https://jlcpcb.com/).
 
@@ -69,11 +69,26 @@ To make it fit properly you need to perform a cut at 14.60 mm and only keep the 
 1. Get a PCB and prepare it by soldering the components onto it (if not already done through SMT assembly)
 2. Assemble the rotary encoder, the oled socket and the hotswap sockets (if not already done)
 3. Fix the issue with the pcb as shown in [this chapter](#fixing-the-pcb)
-4. Place a foam (as shown) to support the OLED and mount the oled
-**tbd image**
+
+    <div style="display: flex;">
+        <img src="docs/_assets/assembly/pcb_front.webp" alt="Heat inserts" width="240px" style="margin-right: 10px;">
+        <img src="docs/_assets/assembly/pcb_back.webp" alt="Heat inserts" width="240px">
+    </div>
+
+4. Place a foam (as shown) to support the OLED and mount the oled:
+
+     <img src="docs/_assets/assembly/oled_foam.webp" alt="Heat inserts" width="240px">
+
 5. Assemble the switches (put the plate between pcb and switches) and the keycaps
-6. Insert the Heat Inserts into the holes provided in the top part
-7. Screw the case together with the pcb in between and put the knob on the rotary encoder
+6. Insert the heat inserts into the holes provided in the top part:
+
+    <img src="docs/_assets/assembly/heat_inserts.webp" alt="Heat inserts" width="240px">
+
+7. Put the protective buffers on the bottom case to prevent the macropad from sliding around:
+
+    <img src="docs/_assets/assembly/rubber_feats.webp" alt="Heat inserts" width="240px">
+
+8. Screw the case together with the pcb in between and put the knob on the rotary encoder
 
 ### Flashing the firmware
 
@@ -100,14 +115,14 @@ As the firmware is not currently in the qmk github repository flashing with QMK 
     qmk flash -kb sharkropad -km default
     ```
 
-#### Fixing the pcb
+### Fixing the pcb
 
 In the current design of the pcb, the rgb underglow and the rgb matrix for the keys are connected to different Output pins of the STM32.
 However that is not supported by QMK. Therefore a cable needs to be manually soldered to also make the rgb underglow working:
 - Remove the resistor R10
 - Solder a cable from the left contact of R10 to the bottom contact of R13
 
-    <img src="docs/_assets/pcb_fix/wire_fix.webp" alt="Pcb fix" width=480px>
+    <img src="docs/_assets/pcb_fix/wire_fix.webp" alt="Pcb fix" width=360px>
 
 ## License
 
