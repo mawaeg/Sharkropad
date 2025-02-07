@@ -42,27 +42,25 @@ In case you want to assemble the pcb yourself you can find all the needed parts 
 
 ### 3d printed case
 
-The case consist of 4 printed parts:
+The case consists of 4 3d printed parts:
 - Bottom part of the case
 - Top part of the case
 - Plate for the switches
-- Rotary Encoder Knob
+- Rotary encoder knob
 
-I printed the parts with default print settings with a layer height of .2mm.
+The stl files for the 3d printed parts can be found under [cad/stl/](cad/stl/).
 
-For the bottom part I used transparent filament to make the underglow leds shine through.
+The parts are created with [OpenSCAD](https://openscad.org/) and the source code is stored at [cad/](cad/).
 
-For the top part, the plate and the knob I used matte black PLA.
+#### Print settings
 
-#### Rotary Encoder Knob
+For the bottom part I used transparent PLA to make the underglow leds shine through.
 
-> **_NOTE:_**  The knob is currently not included in the repository because I am not sure about the licensing.
+For the top part, the plate and the rotary encoder knob I used matte black PLA.
 
-The knob can be found here: [Encoder Knob by VOID](https://www.printables.com/model/347536-encoder-knob/files)
+I printed the case and the plate with default print settings with a layer height of .2mm.
 
-To make it fit properly you need to perform a cut at 14.60 mm and only keep the bottom part as shown here in Prusa Slicer:
-
-<img src="docs/_assets/knob-slicer.webp" alt="Slicer knob cut" width=720px>
+The rotary encoder knob should be printed with a layer height of .2mm and at least 3 solid bottom layers
 
 ### Building the Sharkropad
 
