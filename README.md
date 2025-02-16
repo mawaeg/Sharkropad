@@ -54,13 +54,15 @@ The parts are created with [OpenSCAD](https://openscad.org/) and the source code
 
 #### Print settings
 
-For the bottom part I used transparent PLA to make the underglow leds shine through.
+For the bottom part of the case I used transparent PLA to make the underglow leds shine through.
 
-For the top part, the plate and the rotary encoder knob I used matte black PLA.
+For the top part of the case, the plate and the rotary encoder knob I used matte black PLA.
 
 I printed the case and the plate with default print settings with a layer height of .2mm.
 
-The rotary encoder knob should be printed with a layer height of .2mm and at least 3 solid bottom layers
+> **_NOTE:_** For the top and bottom case you will need some supports for the cutouts for the encoder and the screw heads. Default support settings should work just fine. (I like to use organic supports.)
+
+The rotary encoder knob should be printed with a layer height of .2mm and at least 3 solid bottom layers.
 
 ### Building the Sharkropad
 
