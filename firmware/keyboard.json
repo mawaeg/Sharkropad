@@ -1,6 +1,6 @@
 {
     "manufacturer": "Marek Schmitt",
-    "keyboard_name": "sharkropad",
+    "keyboard_name": "Sharkropad",
     "maintainer": "mawaeg",
     "bootloader": "stm32-dfu",
     "diode_direction": "COL2ROW",
@@ -21,7 +21,7 @@
     "usb": {
         "device_version": "1.0.0",
         "pid": "0xAFFE",
-        "vid": "0xFEED"
+        "vid": "0x6D73"
     },
     "layouts": {
         "LAYOUT_numpad_4x4": {
