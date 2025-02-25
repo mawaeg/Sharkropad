@@ -1,8 +1,8 @@
 # Sharkropad
 
-**Sharkropad** is an open-source hotswappable macropad supporting QMK.
+**Sharkropad** is an open-source hotswappable macropad supporting QMK/VIA.
 
-This repository includes a custom pcb design, a 3d printed case and QMK firmware.
+This repository includes a custom pcb design, a 3d printed case and QMK/VIA firmware.
 
 <img src="docs/_assets/Sharkropad-side.webp" alt="Sharkropad Logo" width=480px>
 
@@ -11,6 +11,7 @@ This repository includes a custom pcb design, a 3d printed case and QMK firmware
 - **Rotary Encoder**
 - **OLED Display**
 - **Customizable RGB Lighting**
+- **Customizable keymap using VIA**
 - **Hot-Swappable Switches**
 - **Powered by a STM32L432 MCU**
 
@@ -95,6 +96,9 @@ The rotary encoder knob should be printed with a layer height of .2mm and at lea
 > **_NOTE:_** Once the firmware is flashed once you can enter bootloader mode by disconnecting the macropad, pressing and holding the encoder knob while plugging it back in. Then the macropad is in bootloader mode and you can connect to it  and program it using the CubeProgrammer or flash using QMK.
 
 1. Get the provided firmware in the latest release
+    - If you want to be able to use VIA to modify the keymap you should use `sharkropad_via.bin`
+    - If you only need QMK functionality you can also use ` sharkropad_default.bin`
+    
 2. Flash the firmware using the [STM32 CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) as shown below:
 
 <img src="docs/_assets/flashing/cubeprog-connecting.webp" alt="Cube Programmer connecting">
@@ -115,6 +119,12 @@ As the firmware is not currently in the qmk github repository flashing with QMK 
     qmk flash -kb sharkropad -km default
     ```
 
+    or for via compatible firmware:
+    ```shell
+    qmk compile -kb sharkropad -km via
+    qmk flash -kb sharkropad -km via
+    ```
+
 ### Fixing the pcb
 
 In the current design of the pcb, the rgb underglow and the rgb matrix for the keys are connected to different Output pins of the STM32.
@@ -123,6 +133,38 @@ However that is not supported by QMK. Therefore a cable needs to be manually sol
 - Solder a cable from the left contact of R10 to the bottom contact of R13
 
     <img src="docs/_assets/pcb_fix/wire_fix.webp" alt="Pcb fix" width=360px>
+
+
+## Customize the keymap using VIA
+
+VIA is a tool that allows you to customize the keymap of your keyboard.
+
+As the configuration for this macropad is not yet added to the via repository a manual step is needed to customize using VIA.
+
+1. Open the VIA web app at [https://usevia.app/](https://usevia.app/)
+2. Navigate to the settings and ensure the `Show Design tab` option is enabled
+
+    <img src="docs/_assets/via/enable-design-tab.webp" alt="Enable Design Tab" width=480px>
+
+3. Open the design tab and press `Load` (Draft Definition)
+
+    <img src="docs/_assets/via/design-tab-load-definition.webp" alt="Load definition" width=480px>
+
+4. Select the `via.json` provided in this release. You should now see a model of the macropad:
+
+    <img src="docs/_assets/via/design-tab.webp" alt="Design Tab Overview" width=480px>
+
+5. You can now open the Customize window where you need to click `Authorize device +`
+
+   <img src="docs/_assets/via/customize-authorize-device.webp" alt="Authorize device" width=480px> 
+
+6. Select the device with Sharkropad in its name
+
+
+You can now customize the individual keys and also customize the RGB Lighting:
+
+<img src="docs/_assets/via/customize-keymap.webp" alt="Customize keymap" width=600px>
+<img src="docs/_assets/via/customize-lighting.webp" alt="Customize lighting" width=600px>
 
 ## License
 
