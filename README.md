@@ -39,7 +39,7 @@ In case you want to assemble the pcb yourself you can find all the needed parts 
 | Rotary Encoder            | 1         | [42keebs.eu](https://42keebs.eu/shop/parts/ec11-rotary-encoder/?attribute_type=Bourns%20(larger%20body)) | This particular one works with the case and the knob
 | OLED display              | 1         | [42keebs.eu](https://42keebs.eu/shop/parts/oled-display-0-91-128x32/?attribute_pcb-colour=Black)
 | OLED socket (low profile) | 1         | [42keebs.eu](https://42keebs.eu/shop/parts/low-profile-oled-sockets/) 
-| Hotswap sockets           | 12        | [42keebs.eu](https://42keebs.eu/shop/parts/kailh-choc-hot-swap-sockets/) | (2 x 10 sockets)
+| Hotswap sockets           | 12        | [42keebs.eu](https://42keebs.eu/shop/parts/kailh-mx-hot-swap-sockets/) | (2 x 10 sockets) !Cherry MX-style!
 
 ### 3d printed case
 
