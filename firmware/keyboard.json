@@ -8,17 +8,14 @@
     },
     "diode_direction": "COL2ROW",
     "encoder": {
-        "enabled": true,
         "rotary": [
             {"pin_a": "A0", "pin_b": "A1"}
         ]
     },
     "features": {
         "bootmagic": true,
-        "command": false,
-        "console": false,
+        "encoder": true,
         "extrakey": true,
-        "mousekey": false,
         "nkro": true,
         "oled": true,
         "rgb_matrix": true
@@ -81,7 +78,7 @@
             "typing_heatmap": true
         },
         "default": {
-            "animation": "gradient_up_down"
+            "animation": "cycle_up_down"
         },
         "driver": "ws2812",
         "layout": [
@@ -106,7 +103,7 @@
             {"x": 8, "y": 45, "flags": 2},
             {"x": 8, "y": 17, "flags": 2}
         ],
-        "maximum_brightness": 180
+        "max_brightness": 180
     },
     "url": "https://github.com/mawaeg/sharkropad",
     "usb": {
@@ -115,10 +112,11 @@
         "vid": "0x6D73"
     },
     "ws2812": {
+        "driver": "pwm",
         "pin": "B3"
     },
     "layouts": {
-        "LAYOUT_numpad_4x4": {
+        "LAYOUT": {
             "layout": [
                 {"matrix": [0, 3], "x": 3, "y": 0},
                 {"matrix": [1, 0], "x": 0, "y": 1},

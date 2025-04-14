@@ -6,8 +6,12 @@
         "rows": 4,
         "cols": 4
     },
-    "menus": ["qmk_rgb_matrix" ],
-    "keycodes": ["qmk_lighting"],
+    "menus": [
+        "qmk_rgb_matrix"
+    ],
+    "keycodes": [
+        "qmk_lighting"
+    ],
     "layouts": {
         "keymap": [
             [
