@@ -40,6 +40,7 @@ In case you want to assemble the pcb yourself you can find all the needed parts 
 | OLED display              | 1         | [42keebs.eu](https://42keebs.eu/shop/parts/oled-display-0-91-128x32/?attribute_pcb-colour=Black)
 | OLED socket (low profile) | 1         | [42keebs.eu](https://42keebs.eu/shop/parts/low-profile-oled-sockets/) 
 | Hotswap sockets           | 12        | [42keebs.eu](https://42keebs.eu/shop/parts/kailh-mx-hot-swap-sockets/) | (2 x 10 sockets) !Cherry MX-style!
+| Switches                  | 12        | [candykeys.com](https://candykeys.com/product/hmx-silent-sakura) | Any MX compatible switch is fine
 
 ### 3d printed case
 
